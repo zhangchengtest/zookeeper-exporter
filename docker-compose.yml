@@ -81,7 +81,11 @@ services:
     ports:
       - 9144:9141
     command: --zk-hosts="zoo1:2181,zoo2:2181,zoo3:2181" --timeout=5
+    networks:
+      mynetwork:
+        ipv4_address: 172.16.1.21
 networks:
  mynetwork:
   external:
    name: mynetwork
+
