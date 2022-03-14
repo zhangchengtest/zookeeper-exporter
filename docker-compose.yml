@@ -39,8 +39,8 @@ services:
     ports: # 端口
       - 2182:2181
     volumes: # 挂载数据卷
-      - ./zoo1/data:/data
-      - ./zoo1/datalog:/datalog 
+      - ./zoo2/data:/data
+      - ./zoo2/datalog:/datalog 
     environment:
       TZ: Asia/Shanghai
       ZOO_MY_ID: 2 # 节点ID
@@ -67,8 +67,8 @@ services:
     ports: # 端口
       - 2183:2181
     volumes: # 挂载数据卷
-      - ./zoo1/data:/data
-      - ./zoo1/datalog:/datalog 
+      - ./zoo3/data:/data
+      - ./zoo3/datalog:/datalog 
     environment:
       TZ: Asia/Shanghai
       ZOO_MY_ID: 3 # 节点ID
