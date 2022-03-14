@@ -5,6 +5,7 @@ services:
   zoo1:
     image: zookeeper:3.6
     hostname: zoo1
+    container_name: zoo1
     ports:
       - 2181:2181
     environment:
@@ -28,6 +29,7 @@ services:
   zoo2:
     image: zookeeper:3.6
     hostname: zoo2
+    container_name: zoo2
     ports:
       - 2182:2181
     environment:
@@ -50,6 +52,7 @@ services:
   zoo3:
     image: zookeeper:3.6
     hostname: zoo3
+    container_name: zoo3
     ports:
       - 2183:2181
     environment:
