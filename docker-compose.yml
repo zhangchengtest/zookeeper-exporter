@@ -19,6 +19,9 @@ services:
     ports:
       - 9141:9141
     command: --zk-hosts="zoo1:2181"
+    networks:
+      mynetwork:
+        ipv4_address: 172.16.1.7
 
 
   # second
@@ -39,6 +42,9 @@ services:
     ports:
       - 9142:9141
     command: --zk-hosts="zoo2:2181"
+    networks:
+      mynetwork:
+        ipv4_address: 172.16.1.8
 
   # third
   zoo3:
@@ -63,6 +69,9 @@ services:
     ports:
       - 9143:9141
     command: --zk-hosts="zoo3:2181" --timeout=5
+    networks:
+      mynetwork:
+        ipv4_address: 172.16.1.9
 
   # multitarget
   exp123:
